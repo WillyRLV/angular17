@@ -10,10 +10,15 @@ import { GamesComponent } from '../games/games.component';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-username = 'willy';
-isLoggedIn = false;
- greet() {
-  alert("hola");
-  
-}
+  username = 'willy';
+  isLoggedIn = false;
+  // crear una variable para pasar al padre
+  favGame = ''
+  // funcion que obtiene la variable
+  getFavorite(gameName:string) { 
+    this.favGame = gameName;
+  }
+  greet() {
+    alert("hola");
+  }
 }

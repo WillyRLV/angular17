@@ -8,6 +8,15 @@
     <button (click)="isLoggedIn= true"  >Log in</button>
 
     }
-    <app-games></app-games>
+    <!-- USAR PROPShacia abajo (username) -->
+    <!-- USAR PROPShacia arriba (favGame) -->
+
+    <app-games
+    (addFavoriteEvent)="getFavorite($event)"
+    username = "{{username}}" ></app-games>
+
+    @if (favGame !== '') {
+        <p>Tu juego favorito es {{favGame}}</p>
+    }
 
 </section>
